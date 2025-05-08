@@ -14,7 +14,7 @@
 
     - name: Install k3s
       shell: |
-        curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="{{ k3s_version }}" sh -
+        curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="{{ k3s_version }}" sh -s - --tls-san 13.203.66.131
       args:
         creates: /usr/local/bin/k3s
 
